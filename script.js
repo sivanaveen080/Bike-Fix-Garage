@@ -36,8 +36,18 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
 
     var encodedText = encodeURIComponent(text);
 
-    // Open WhatsApp with the formatted message
-    window.open(`https://web.whatsapp.com/send?phone=${myNumber}&text=${encodedText}`, '_blank');
+    // Device detection for WhatsApp link
+    function isMobile() {
+        return /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    var url;
+    if (isMobile()) {
+        url = `whatsapp://send?phone=${myNumber}&text=${encodedText}`;
+    } else {
+        url = `https://web.whatsapp.com/send?phone=${myNumber}&text=${encodedText}`;
+    }
+    window.open(url, '_blank');
 
     // Show success message and reset form
     document.getElementById('appoint-success').style.display = 'block';
@@ -46,7 +56,6 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
         document.getElementById('appointmentForm').reset();
     }, 2500);
 });
-
 
 
 // Review form logic
