@@ -22,7 +22,7 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     var date = this.date.value;
     var time = this.time.value;
     var message = this.message.value;
-    var myNumber = "+917981908319"; // e.g., +919876543210
+    var myNumber = "+919912233382"; // e.g., +919876543210
 
     // Build the WhatsApp message (line by line, with Booking ID)
     var text =
@@ -76,3 +76,4 @@ document.getElementById('reviewForm').addEventListener('submit', function(event)
         this.reset();
     }
 });
+
