@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Mechanic Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bike Fix Garage</div>
+            <ul class="nav-links">
+                <li><a href="#appointments">Appointment</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Bike Fix Garage</h1>
+        <p>Your trusted local bike repair experts</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_c9bkEL-sJxoadWjmh2znCpiWjBZIDOvzw&s" alt="Bike Repair" class="main-image">
+    </section>
+
+    <section id="appointments" class="appointment-section">
+        <h2>Book an Appointment</h2>
+        <form id="appointmentForm">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Mobile Number" required>
+            <input type="email" name="email" placeholder="Email (optional)">
+            <input type="date" name="date" required>
+            <input type="time" name="time" required>
+            <textarea name="message" placeholder="Service details or message" rows="3"></textarea>
+            <button type="submit">Book Now</button>
+            <p id="appoint-success" class="success-message" style="display:none;">Appointment submitted! We'll contact you soon.</p>
+        </form>
+    </section>
+
+    <section id="reviews" class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <div id="reviews-container">
+            <div class="review">
+                <div class="review-user">Naveen</div>
+                <div class="review-date">2025-09-18</div>
+                <div class="review-content">"Fast, reliable service! Got my bike fixed same day. Highly recommend."</div>
+            </div>
+            <div class="review">
+                <div class="review-user">Dhiru</div>
+                <div class="review-date">2025-10-07</div>
+                <div class="review-content">"Friendly staff and excellent repairs. Will visit again!"</div>
+            </div>
+        </div>
+        <form id="reviewForm">
+            <input type="text" name="user" placeholder="Your Name" required>
+            <textarea name="review" placeholder="Write your review" rows="2" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+
+    <section id="careers" class="career-section">
+        <h2>Careers</h2>
+        <p>Join our growing team! Email your resume to careers@bikefixgarage.com.</p>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ9QCHy38h4cD8RPTV9ETbRlEN0EiNSPnG5A&s" alt="Workshop Action">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm5fj3z2Dnv1-77WXRZLln0q_LVjy1DBsh_g&s" alt="Team Photo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn7dKvSx98LZlVF1OAK-EXQb8BHGlNtp__tg&s" alt="Classic Bike Restoration">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bike Fix Garage. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
